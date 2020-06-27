@@ -15,26 +15,27 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 import history from './history';
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
 // core components
-import Admin from "layouts/Admin.js";
+import Admin from 'layouts/Admin.js';
+import Login from 'layouts/Login';
 import CreateForm from './components/CreateForm';
 import EditForm from './components/EditForm';
-import "assets/css/material-dashboard-react.css?v=1.9.0";
-
+import 'assets/css/material-dashboard-react.css?v=1.9.0';
 
 ReactDOM.render(
   <Router history={history}>
     <Switch>
       <Route path="/admin" component={Admin} />
-      <Route path="/create" component={CreateForm}/>
-      <Route path="/edit/:id" component={EditForm}/>
+      <Route path="/login" component={Login} />
+      <Route path="/create" component={CreateForm} />
+      <Route path="/edit/:id" component={EditForm} />
       <Redirect from="/" to="/admin/dashboard" />
     </Switch>
   </Router>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
