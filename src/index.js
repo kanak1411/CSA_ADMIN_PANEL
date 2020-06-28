@@ -34,7 +34,7 @@ ReactDOM.render(
       <Route path="/login" component={Login} />
       <Route path="/create" component={CreateForm} />
       <Route path="/edit/:id" component={EditForm} />
-      <Redirect from="/" to="/admin/dashboard" />
+      <Redirect from="/" to="/login" />
     </Switch>
   </Router>,
   document.getElementById('root')
